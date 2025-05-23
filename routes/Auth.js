@@ -4,7 +4,6 @@ const bcrypt = require("bcryptjs");
 const { body, validationResult } = require("express-validator");
 const jwt = require("jsonwebtoken");
 const FetchUser = require("../middleware/Fetchuser");
-
 const router = express.Router();
 
 const JWT_SECRET = process.env.JWT_SECRET;
@@ -85,7 +84,7 @@ router.post('/login',async(req,res)=>{
 
 
 // getloginusers
-router.get('/getloginusers', FetchUser, async(req, res) => {
+router.get('/getloginusers',FetchUser, async(req, res) => {
     try {
         const userId = req.user.id;
         const user = await User.findById(userId).select("-password");
