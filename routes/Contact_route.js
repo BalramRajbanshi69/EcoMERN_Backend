@@ -1,6 +1,6 @@
 const express = require('express');
 const Contact = require('../model/Contact-model');
-const FetchUser = require('../middleware/Fetchuser');
+const FetchUser = require('../middleware/FetchUser');
 const router = express.Router();
 
 

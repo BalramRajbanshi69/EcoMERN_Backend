@@ -8,7 +8,7 @@ const fs = require("fs");
 
 const app = express();
 const dbConnect = require("./db/db");
-const logger = require("./middleware/logger");
+const logger = require('./middleware/logger');
 dbConnect();
 
 //environment variable and port setup
