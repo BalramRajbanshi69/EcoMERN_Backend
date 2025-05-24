@@ -24,12 +24,12 @@ router.post(
         return file.filename;
       });
       const product = await ProductModal.create({
+        user: req.user.id,
         name,
         price,
         description,
         inStock,
-        image,
-        user: req.user.id,
+        image
       });
       const saveProduct = await product.save();
       res
